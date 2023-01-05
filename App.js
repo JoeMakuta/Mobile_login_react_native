@@ -1,37 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView, TextInput } from 'react-native-web';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { Button, TextInput } from "react-native-web";
 
 export default function App() {
-  return (
-    <SafeAreaView>
-      <View style={styles.container}>
-      <Text>Hello Guys !</Text>
-      <TextInput
-        
-        placeholder="useless placeholder"
+  console.log("Hello Guys");
 
-        value="Hello"
-      />
-      <TextInput
-        
-        value="Hello"
-        placeholder="useless placeholder"
-        keyboardType="numeric"
-      />
-      <StatusBar style="auto" />
-    </View>
-    
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text
+        onPress={() => {
+          console.log("Text pressed");
+        }}
+        style={styles.textStyle}
+      >
+        Hi world !{" "}
+      </Text>
     </SafeAreaView>
-    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "dodgerblue",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  textStyle: {
+    backgroundColor: "#fff",
   },
 });
